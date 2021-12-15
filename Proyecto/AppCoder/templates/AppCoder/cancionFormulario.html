@@ -1,0 +1,33 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+
+{% block contenido2 %}
+
+<h1 class="mb-1">Formulario de Cantante</h1>
+
+
+{% endblock %}
+
+
+{% block contenido %}
+
+    {% if miCancionForm.errors %}
+    <p>ERROR!!!!!!!!</p>
+    {% endif %}
+
+
+    <form action="/AppCoder/cancionFormulario" method="POST">{% csrf_token %}
+        <!-- 
+        <p>Direccion: <input type="text" name="direccion"></p>
+        <p>Año: <input type="number" name="anioFund"></p>
+        <input type="submit" value="ENVIOOOO!!!!" name="" id="">
+        -->
+        <table>
+        {{miCancionFormulario.as_table}}
+        </table>
+
+        <input type="submit" value="ENVIOOOO!!!!" name="" id="">
+    </form>
+
+{% endblock %}
