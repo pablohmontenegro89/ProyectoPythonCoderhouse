@@ -1,0 +1,24 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+        {% block contenido2 %}
+            <h1 class="mb-1">Detalle del usuario</h1>
+        {% endblock %}
+
+
+        {% block contenido %}
+
+
+          <p>Nombre del usuario: <i> {{ usuario.nombre}}</i></p>
+          <p>Mail del usuario: <i> {{ usuario.mail}}</i></p>
+          <p>Edad: <i> {{ usuario.edad}}</i></p>
+
+          <p>
+
+            <a href="{% url 'ListUsuarios' %}">Regresar</a>
+
+          </p>
+
+{% endblock %}

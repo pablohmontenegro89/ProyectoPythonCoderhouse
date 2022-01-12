@@ -1,0 +1,1 @@
+Ir a la opción de usuarios. Estos usuarios son los que pueden reproducir música. Se puede agregar, editar, modificar y eliminar usuarios

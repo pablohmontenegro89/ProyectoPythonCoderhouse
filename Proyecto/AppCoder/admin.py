@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(Cantante)
 admin.site.register(Cancion)
 admin.site.register(Usuario)
+admin.site.register(Avatar)

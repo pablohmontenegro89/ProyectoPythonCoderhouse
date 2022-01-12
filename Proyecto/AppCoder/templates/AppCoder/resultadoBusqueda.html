@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+
+{% block contenido2 %}
+
+<h1 class="mb-1">BUSQUEDA USUARIO!!!</h1>
+
+
+{% endblock %}
+
+
+{% block contenido %}
+
+    <h1>Estamos buscando...</h1>
+
+    {% if usuarios %}
+
+        <ul>
+        {% for usuario in usuarios %}
+        <li>NOMBRE: {{usuario.nombre}}</li>
+        <li>Mail: {{usuario.mail}}</li>
+        <li>Edad: {{usuario.edad}}</li>
+
+        {% endfor %}
+
+        </ul>
+    {% endif %}    
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+
+{% block contenido2 %}
+
+<h1 class="mb-1">Lista de usuarios</h1>
+
+
+{% endblock %}
+
+
+{% block contenido %}
+    <p>Acá tenemos todos los usuarios:</p><br>
+    <ul>
+    {% for usuario in object_list %}
+
+    <li>
+        <p>NOMBRE: {{usuario.nombre}}</p>    
+
+        <p>
+            <a href="{% url 'Detail' usuario.id %}">Ver más</a>
+            <a href="{% url 'Edit' usuario.id %}">Editar</a>
+            <a href="{% url 'Delete' usuario.id %}">Borrar</a>
+    </p>
+    </li>
+
+    {% endfor %}
+    </ul>
+    <a href="{% url 'Usuariocre' %}">AGREGAR OTRO USUARIO</a>
+
+{% endblock %}
